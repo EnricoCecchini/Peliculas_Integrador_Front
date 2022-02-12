@@ -1,0 +1,68 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    margin-bottom: 20px;   
+    margin-left: 50px;
+    margin-right: 50px;  
+}
+
+.headerContainer {
+    flex: 1
+}
+
+.subHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    margin-bottom: 20px;   
+    margin-left: 50px;
+    margin-right: 50px; 
+}
+
+.search {
+    display: inline-block;
+    background: white;
+    border: 1px;
+    border-color: black;
+    border-radius: 5;
+}
+
+.registerButton {
+    display: inline-block;
+    background: white;
+    border: 10px;
+    border-color: black;
+    border-radius: 10;
+}
+
+.horizontalLine {
+    border-bottom: 5px;
+    border-color: black;
+}
+
+.pelicula {
+    border: 5px;
+    border-color: black;
+    border-radius: 5%;
+}
+
+.peliculaTitulo {
+    font-size: 30;
+    font-weight: bold;
+}
+
+.datosPelicula {
+    font-size: 20;
+}
+
+.listaPeliculas {
+    text-align: left;
+    margin-left: 25px;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
