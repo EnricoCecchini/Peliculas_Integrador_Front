@@ -11,16 +11,9 @@ export default function Header({title}) {
                 <h1 style={{marginLeft: '35%'}}>Chaks Movie Catalog</h1>
                 <form>
                     <input type="text" name='Search' placeholder='Search'/>
-                    <input type="submit" value="name" />
+                    <input type="submit" value="Search" />
                 </form>
             </header>
-            <div className='subHeader'>
-                <div style={{fontSize: 30}}>
-                    {title}
-                </div>
-                <button className='registerButton'>Registrar Pelicula</button>
-            </div>
-            <hr className='horizontalLine'/>
         </div>
     )
 }
