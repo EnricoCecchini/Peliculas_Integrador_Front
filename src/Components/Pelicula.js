@@ -5,11 +5,11 @@ const Pelicula = ({peli}) => {
             <p>Ano: {peli.anio}</p>
             <p>Director: {peli.director}</p>
             <p>Categoria: {peli.categoria}</p>
-            <p>
+            {/* <div>
                 {peli.protagonista.map((protag) => (
-                    <div>{protag.nombre}</div>
+                    <p>{protag.nombre}</p>
                 ))}
-            </p>
+            </div> */}
         </div>
     )
 }

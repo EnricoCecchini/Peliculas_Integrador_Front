@@ -8,13 +8,15 @@ Aplicacion de peliculas de Proyecto Integrador
 - [ ] Pagina busqueda
 - [ ] Pagina registrar pelicula
 - [ ] Pagina modificar pelicula
+- [ ] Obener ID de categoria de dropdown
+- [ ] Convertir titulo de pagina a Home button
 
 ### ToDo (API Integration)
 
-- [ ] Get todas las peliculas
-- [ ] Get todas las peliculas de la mims acategoria
+- [x] Get todas las peliculas
+- [ ] Get todas las peliculas de la misma acategoria
 - [ ] Buscar pelicula por titulo o director
-- [ ] registrar pelicula
+- [ ] Registrar pelicula
 - [ ] Modificar datos de pelicula
 - [ ] Eliminar pelicula
 - [ ] Get poster de pelicula (Optional)

@@ -33,7 +33,6 @@
 
 .registerButton {
     display: inline-block;
-    background: white;
     border: 10px;
     border-color: black;
     border-radius: 10;
@@ -62,6 +61,7 @@
     border: 5px;
     border-color: black;
     border-radius: 5%;
+    flex-wrap: wrap;
 }
 
 .peliculaTitulo {

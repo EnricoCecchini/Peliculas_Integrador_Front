@@ -4,31 +4,43 @@ import Header from './Header'
 import Pelicula from './Pelicula'
 
 const API_all = 'http://127.0.0.1:5000/dashboard'
-const API_cat = 'http://127.0.0.1:5000//dashboard_filtrado?cat='
+const API_filtro = 'http://127.0.0.1:5000//dashboard_filtrado?cat='
+const API_cat = 'http://127.0.0.1:5000/get_categorias'
 
 export default function Dashboard() {
     const [pelicula, setPelicula] = useState([])
-    const [category, setCategory] = useState('')
+    const [category, setCategory] = useState([])
 
     useEffect(() => {
-
         getAllMovies()
-        console.log('Peliculas', pelicula)
-        console.log('Peliculas', pelicula)
+        getCategorias()
     }, [])
 
     const getAllMovies = async() => {
         await axios.get(API_all)
         .then(async(r) => { 
             const movieList = r.data 
-            console.log(movieList)
             setPelicula(movieList.peliculas)
         }).catch(e => {console.log('Sin peliculas', e)})
     }
 
+    const getCategorias = async() => {
+        await axios.get(API_cat)
+        .then(async(r) => { 
+            const catList = r.data 
+            //console.log(catList)
+            setCategory(catList.categorias)
+        }).catch(e => {console.log('Sin categorias', e)})
+    }
+
+    // useEffect(() => {
+    //     getCategoryMovies()
+    //     getCategorias()
+    // }, [])
+
     const getCategoryMovies = async() => {
         console.log(category)
-        const catAPI = `${API_cat}${category}`
+        const catAPI = `${API_filtro}${category}`
         console.log(catAPI)
         await axios.get(catAPI)
         .then(async(r) => { 
@@ -63,15 +75,18 @@ export default function Dashboard() {
                     Peliculas
                 </div>
                 <div>
-                    <div class='registerButton'>
+                    <div className='registerButton'>
                         <button>Registrar Pelicula</button>
                     </div>
                     <select name='categorias' id="categorias" onChange={handleChange}
-                    label='Categoria'>
-                        <option value=''>Categoria</option>
-                        <option value={1}>Amor</option>
-                        <option value={2}>Accion</option>
-                        <option value={3}>Terror</option>
+                        label='Categoria'>
+                            <option value="" disabled selected>Categoria</option>
+                            {category.map((cat) => (
+                                <option 
+                                key={cat.categoriaID}
+                                value={cat.categoriaID}
+                                >{cat.descripcion}</option>
+                            ))}
                     </select>
                 </div>
             </div>
