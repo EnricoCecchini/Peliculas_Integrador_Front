@@ -1,8 +1,12 @@
+.background {
+    background-color: bisque;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;  
-    margin-bottom: 20px;   
+    margin-bottom: 5%;   
     margin-left: 50px;
     margin-right: 50px;  
 }
@@ -15,7 +19,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;  
-    margin-bottom: 20px;   
     margin-left: 5%;
     margin-right: 5%; 
 }
@@ -52,7 +55,7 @@
     height: 5;
     margin-left: 5%;
     margin-right: 5%;
-
+    margin-bottom: 2%;
 }
 
 .pelicula {
@@ -71,7 +74,8 @@
 }
 
 .listaPeliculas {
-    text-align: left;
+    text-align: center;
+    
 }
 
 .grid {
@@ -80,4 +84,13 @@
     margin-left: 5%;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-around;
+    background-color: bisque;
+}
+
+.body {
+    background-color: bisque;
+}
+
+.peliculaButton {
+    width: 75%;
 }
