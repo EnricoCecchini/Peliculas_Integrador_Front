@@ -11,133 +11,124 @@ export default function Dashboard() {
     const [peliculaFiltrada, setPeliculaFiltrada] = useState([])
 
     const [pelicula, setPelicula] = useState([
-    {
-        "anio": 2016,
-        "director": "Taika Waititi",
-        "duracion": "2:9",
-        "peliculaID": 2,
-        "protagonista": [
+        {
+            "anio": 2018,
+            "categoria": "Accion",
+            "categoriaID": 2,
+            "director": "Hermanos Russo",
+            "duracion": "2:29",
+            "peliculaID": 1,
+            "protagonista": [
+              {
+                "nombre: ": "Chris Hemsworth",
+                "protagID": 1
+              },
+              {
+                "nombre: ": "Robert Downey JR",
+                "protagID": 2
+              },
+              {
+                "nombre: ": "Tom Holland",
+                "protagID": 8
+              }
+            ],
+            "titulo": "Avengers Infinity War"
+          },
           {
-            "nombre: ": "Chris Hemsworth",
-            "protagID": 1
+            "anio": 2016,
+            "categoria": "Accion",
+            "categoriaID": 2,
+            "director": "Taika Waititi",
+            "duracion": "2:9",
+            "peliculaID": 2,
+            "protagonista": [
+              {
+                "nombre: ": "Chris Hemsworth",
+                "protagID": 1
+              }
+            ],
+            "titulo": "Thor Ragnarok"
+          },
+          {
+            "anio": 2001,
+            "categoria": "Terror",
+            "categoriaID": 3,
+            "director": "J.K Rowling",
+            "duracion": "2:39",
+            "peliculaID": 31,
+            "protagonista": [
+              {
+                "nombre: ": "Daniel Radcliffe",
+                "protagID": 11
+              }
+            ],
+            "titulo": "Harry Potter"
+          },
+          {
+            "anio": 2011,
+            "categoria": "Terror",
+            "categoriaID": 3,
+            "director": "J.K Rowling",
+            "duracion": "2:39",
+            "peliculaID": 36,
+            "protagonista": [
+              {
+                "nombre: ": "Robert Downey JR",
+                "protagID": 2
+              },
+              {
+                "nombre: ": "Daniel Radcliffe",
+                "protagID": 11
+              },
+              {
+                "nombre: ": "Natasha Romanoff",
+                "protagID": 14
+              }
+            ],
+            "titulo": "Avengers 2"
+          },
+          {
+            "anio": 2011,
+            "categoria": "Terror",
+            "categoriaID": 3,
+            "director": "Tim Burton",
+            "duracion": "2:39",
+            "peliculaID": 45,
+            "protagonista": [
+              {
+                "nombre: ": "Daniel Radcliffe",
+                "protagID": 11
+              },
+              {
+                "nombre: ": "Jack Sparrow",
+                "protagID": 15
+              }
+            ],
+            "titulo": "Esward SCissorhands"
+          },
+          {
+            "anio": 2018,
+            "categoria": "Terror",
+            "categoriaID": 3,
+            "director": "James Gunn",
+            "duracion": "1:39",
+            "peliculaID": 46,
+            "protagonista": [
+              {
+                "nombre: ": "Robert Downey JR",
+                "protagID": 2
+              },
+              {
+                "nombre: ": " Natasha Romanoff",
+                "protagID": 13
+              },
+              {
+                "nombre: ": "Chris Evans",
+                "protagID": 16
+              }
+            ],
+            "titulo": "Avengers 3"
           }
-        ],
-        "titulo": "Thor Ragnarok"
-      },
-      {
-        "anio": 2018,
-        "director": "Hermanos Russo",
-        "duracion": "2:29",
-        "peliculaID": 1,
-        "protagonista": [
-          {
-            "nombre: ": "Chris Hemsworth",
-            "protagID": 1
-          },
-          {
-            "nombre: ": "Robert Downey JR",
-            "protagID": 2
-          },
-          {
-            "nombre: ": "Tom Holland",
-            "protagID": 8
-          }
-        ],
-        "titulo": "Avengers Infinity War"
-      },
-      {
-        "anio": 2019,
-        "director": "Hermanos Russo",
-        "duracion": "2:39",
-        "peliculaID": 25,
-        "protagonista": [
-          {
-            "nombre: ": "Chris Hemsworth",
-            "protagID": 1
-          },
-          {
-            "nombre: ": "Robert Downey JR",
-            "protagID": 2
-          },
-          {
-            "nombre: ": "Tom Holland",
-            "protagID": 8
-          }
-        ],
-        "titulo": "Avengers Endgame"
-      },
-      {
-        "anio": 2001,
-        "director": "J.K Rowling",
-        "duracion": "2:39",
-        "peliculaID": 31,
-        "protagonista": [
-          {
-            "nombre: ": "Daniel Radcliffe",
-            "protagID": 11
-          }
-        ],
-        "titulo": "Harry Potter"
-      },
-      {
-        "anio": 2011,
-        "director": "J.K Rowling",
-        "duracion": "2:39",
-        "peliculaID": 36,
-        "protagonista": [
-          {
-            "nombre: ": "Robert Downey JR",
-            "protagID": 2
-          },
-          {
-            "nombre: ": "Daniel Radcliffe",
-            "protagID": 11
-          },
-          {
-            "nombre: ": "Natasha Romanoff",
-            "protagID": 14
-          }
-        ],
-        "titulo": "Avengers 2"
-      },
-      {
-        "anio": 2011,
-        "director": "Tim Burton",
-        "duracion": "2:39",
-        "peliculaID": 45,
-        "protagonista": [
-          {
-            "nombre: ": "Daniel Radcliffe",
-            "protagID": 11
-          },
-          {
-            "nombre: ": "Jack Sparrow",
-            "protagID": 15
-          }
-        ],
-        "titulo": "Esward SCissorhands"
-      },
-      {
-        "anio": 2018,
-        "director": "James Gunn",
-        "duracion": "1:39",
-        "peliculaID": 46,
-        "protagonista": [
-          {
-            "nombre: ": "Robert Downey JR",
-            "protagID": 2
-          },
-          {
-            "nombre: ": " Natasha Romanoff",
-            "protagID": 13
-          },
-          {
-            "nombre: ": "Chris Evans",
-            "protagID": 16
-          }
-        ],
-        "titulo": "Avengers 3"
-      }
     ])
 
     useEffect(() => {

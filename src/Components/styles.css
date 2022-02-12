@@ -16,8 +16,8 @@
     justify-content: space-between;
     align-items: center;  
     margin-bottom: 20px;   
-    margin-left: 50px;
-    margin-right: 50px; 
+    margin-left: 5%;
+    margin-right: 5%; 
 }
 
 .search {
@@ -39,6 +39,10 @@
 .horizontalLine {
     border-bottom: 5px;
     border-color: black;
+    height: 5;
+    margin-left: 5%;
+    margin-right: 5%;
+
 }
 
 .pelicula {
@@ -63,6 +67,8 @@
 
 .grid {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 5%;
+    margin-left: 5%;
     grid-template-columns: repeat(4, 1fr);
+    justify-content: space-around;
 }

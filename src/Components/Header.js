@@ -20,7 +20,7 @@ export default function Header({title}) {
                 </div>
                 <button className='registerButton'>Registrar Pelicula</button>
             </div>
-            <div className='horizontalLine'/>
+            <hr className='horizontalLine'/>
         </div>
     )
 }
